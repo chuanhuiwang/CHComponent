@@ -1,0 +1,6 @@
+framework module CHComponent {
+  umbrella header "CHComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}
