@@ -1,9 +1,9 @@
 {
   "name": "CHComponent",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A short description of CHComponent.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/372020909@qq.com/CHComponent",
+  "homepage": "https://github.com/chuanhuiwang/CHComponent",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "372020909@qq.com": "372020909@qq.com"
   },
   "source": {
-    "git": "https://github.com/372020909@qq.com/CHComponent.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/chuanhuiwang/CHComponent",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
