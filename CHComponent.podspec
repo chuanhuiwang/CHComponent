@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CHComponent'
-  s.version          = '0.1.1'
-  s.summary          = 'A short description of CHComponent.'
+  s.version          = '0.1.2'
+  s.summary          = 'CHComponent, UI组件库'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+CHComponent, UI组件库,
+自定义按钮: 左图右字，右图左字，上图下字，下图上字，图片缩放，间距设置
                        DESC
 
   s.homepage         = 'https://github.com/chuanhuiwang/CHComponent'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '372020909@qq.com' => '372020909@qq.com' }
-  s.source           = { :git => 'https://github.com/chuanhuiwang/CHComponent', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/chuanhuiwang/CHComponent.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
@@ -39,4 +40,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.swift_version = '5.0'
 end
