@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CHComponent'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'CHComponent, UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 CHComponent, UI组件库,
-自定义按钮: 左图右字，右图左字，上图下字，下图上字，图片缩放，间距设置
+自定义按钮: 左图右字，右图左字，上图下字，下图上字，图片缩放，间距设置, maximumIntrinsicContentRect = true 时，图片和文字显示在两边
                        DESC
 
   s.homepage         = 'https://github.com/chuanhuiwang/CHComponent'

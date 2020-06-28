@@ -64,34 +64,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hEy-x7-4Jp" customClass="CHButton" customModule="CHComponent">
-                                <rect key="frame" x="82" y="189" width="126" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEy-x7-4Jp" customClass="CHButton" customModule="CHComponent">
+                                <rect key="frame" x="16" y="283.5" width="343" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kYX-5w-pPN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" image="square.and.arrow.down.fill" catalog="system">
-                                    <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">Buttonbutton
-Button</string>
-                                            <attributes>
-                                                <font key="NSFont" metaFont="system" size="15"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                                <state key="normal" title="Button" image="square.and.arrow.down.fill" catalog="system"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
-                                        <integer key="value" value="2"/>
+                                        <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maximumIntrinsicContentRect" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hEy-x7-4Jp" firstAttribute="centerX" secondItem="qQ8-EU-sHg" secondAttribute="centerX" id="F3X-Go-9bg"/>
+                            <constraint firstItem="hEy-x7-4Jp" firstAttribute="leading" secondItem="qQ8-EU-sHg" secondAttribute="leadingMargin" id="GT3-QA-42Z"/>
+                            <constraint firstItem="hEy-x7-4Jp" firstAttribute="centerY" secondItem="qQ8-EU-sHg" secondAttribute="centerY" id="ObU-Nh-ZrY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hEy-x7-4Jp" secondAttribute="trailing" id="RkZ-Wc-ieP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mMb-o1-55N"/>
                 </viewController>

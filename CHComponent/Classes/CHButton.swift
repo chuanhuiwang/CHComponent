@@ -35,6 +35,12 @@ import UIKit
         }
     }
     
+    @IBInspectable public var maximumIntrinsicContentRect: Bool = false {
+        didSet {
+            updateButton()
+        }
+    }
+    
     @IBInspectable public var imageScale: CGFloat = 1 {
         didSet {
             updateButton()
@@ -47,20 +53,41 @@ import UIKit
         }
     }
     
+    @IBInspectable public var titleLabelTextAlignment: Int = 1 {
+        didSet {
+            updateTitleLabelAlignment()
+        }
+    }
+    
     var isInitTitleLabel: Bool = false
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.titleLabel?.textAlignment = .center
+        updateTitleLabelAlignment()
     }
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.titleLabel?.textAlignment = .center
+        updateTitleLabelAlignment()
+    }
+    
+    func updateTitleLabelAlignment() {
+        if let alignment = NSTextAlignment(rawValue: titleLabelTextAlignment) {
+            titleLabel?.textAlignment = alignment
+        }
     }
     
     func updateButton() {
         setNeedsLayout()
+    }
+    
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        if backgroundColor == nil || backgroundColor == .clear {
+            backgroundColor = .purple
+        }
+        titleLabel?.backgroundColor = .orange
+        imageView?.backgroundColor = .cyan
     }
 
     public override func sizeThatFits(_ size: CGSize) -> CGSize {
@@ -93,6 +120,9 @@ import UIKit
 extension CHButton {
     
     func intrinsicContentRect(forContentRect contentRect: CGRect) -> CGRect {
+        if maximumIntrinsicContentRect {
+            return contentRect
+        }
         var rect = CGRect.zero
         rect.size = intrinsicContentSizeWithDirection()
         if rect.width > contentRect.width {
@@ -245,8 +275,9 @@ extension CHButton {
                     rect.size.width = max(0, width)
                 }
             }else {
-                let width = contentRect.width - imageRect.width - spacing
-                rect.size.width = max(0, width)
+                var width = contentRect.width - imageRect.width - spacing
+                width = max(0, width)
+                rect.size.width = min(titleSize.width, width)
             }
             if contentDirection == .leftToRight {
                 rect.origin.x = contentRect.maxX - rect.width
@@ -284,7 +315,11 @@ extension CHButton {
                 if contentVerticalAlignment == .fill {
                     rect.origin.y = contentRect.maxY - rect.height
                 }else {
-                    rect.origin.y = imageRect.maxY + spacing
+                    if maximumIntrinsicContentRect {
+                        rect.origin.y = contentRect.maxY - rect.height
+                    }else {
+                        rect.origin.y = imageRect.maxY + spacing
+                    }
                 }
             }else {
                 rect.origin.y = contentRect.minY
