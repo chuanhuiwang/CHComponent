@@ -59,7 +59,15 @@ import UIKit
         }
     }
     
+    @IBInspectable public var titleLabelNumberOfLines: Int = 1 {
+        didSet {
+            titleLabel?.numberOfLines = titleLabelNumberOfLines
+            self.invalidateIntrinsicContentSize()
+        }
+    }
+    
     var isInitTitleLabel: Bool = false
+    var realTitleWidth: CGFloat?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -91,13 +99,29 @@ import UIKit
     }
 
     public override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return myIntrinsicContentSize()
+        self.realTitleWidth = nil
+        let bounds = CGRect(origin: .zero, size: size)
+        let contentRect = self.contentRect(forBounds: bounds)
+        let intrinsic = intrinsicContentRect(forContentRect: contentRect)
+        let titleSize = intrinsicTitleLabelSize()
+        let titleRect = self.titleRect(forIntrinsicContentRect: intrinsic)
+        if titleRect.width != titleSize.width {
+            self.realTitleWidth = titleRect.width
+        }
+        var result = myIntrinsicContentSize()
+        result.width = size.width
+        return result
     }
     
     public override var intrinsicContentSize: CGSize {
         get {
             return myIntrinsicContentSize()
         }
+    }
+    
+    public override func contentRect(forBounds bounds: CGRect) -> CGRect {
+        let result = super.contentRect(forBounds: bounds)
+        return result
     }
     
     public override func imageRect(forContentRect contentRect: CGRect) -> CGRect {
@@ -279,27 +303,33 @@ extension CHButton {
                 width = max(0, width)
                 rect.size.width = min(titleSize.width, width)
             }
+            if rect.width != titleSize.width {
+                realTitleWidth = rect.width
+                self.invalidateIntrinsicContentSize()
+            }
             if contentDirection == .leftToRight {
                 rect.origin.x = contentRect.maxX - rect.width
             }else {
                 rect.origin.x = contentRect.minX
             }
         }else {
+            rect.size.width = min(contentRect.width, titleSize.width)
             switch contentHorizontalAlignment {
             case .fill:
-                rect.origin.x = contentRect.minX
                 rect.size.width = contentRect.width
+                rect.origin.x = contentRect.minX
             case .center:
-                rect.size.width = titleSize.width
                 rect.origin.x = contentRect.midX - rect.width / 2
             case .left, .leading:
                 rect.origin.x = contentRect.minX
-                rect.size.width = titleSize.width
             case .right, .trailing:
-                rect.size.width = titleSize.width
                 rect.origin.x = contentRect.maxX - rect.size.width
             @unknown default:
                 ()
+            }
+            if rect.width != titleSize.width {
+                realTitleWidth = rect.width
+                self.invalidateIntrinsicContentSize()
             }
             if contentVerticalAlignment == .fill {
                 if (titleSize.height + imageSize.height + spacing) < contentRect.height {
@@ -420,7 +450,14 @@ extension CHButton {
     
     func intrinsicTitleLabelSize() -> CGSize {
         let label = tempTitleLabel()
-        return label.intrinsicContentSize
+        if let width = self.realTitleWidth {
+            let size = CGSize(width: width, height: 0)
+            let result = label.sizeThatFits(size)
+            return result
+        }else {
+            let result = label.intrinsicContentSize
+            return result
+        }
     }
     
 }
