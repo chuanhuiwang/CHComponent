@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9E6-nO-k9e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WIB-nZ-WGf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -35,7 +35,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="9E6-nO-k9e" kind="show" id="ayX-UF-ScI"/>
+                                            <segue destination="7K9-Id-wh6" kind="show" id="2jB-nb-GoE"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -52,69 +52,50 @@
             </objects>
             <point key="canvasLocation" x="-139" y="233"/>
         </scene>
-        <!--Button View Controller-->
-        <scene sceneID="ihM-5e-Abl">
+        <!--CHButton-->
+        <scene sceneID="uyi-f1-eXt">
             <objects>
-                <viewController id="9E6-nO-k9e" customClass="ButtonViewController" customModule="CHComponent_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CHButton" id="7K9-Id-wh6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7IW-3q-1Ru"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1Z-Md-r0u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Eiv-yV-pep">
+            <objects>
+                <viewController id="936-Yc-eD9" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h7i-2P-8L4"/>
-                        <viewControllerLayoutGuide type="bottom" id="iV1-Xv-DDw"/>
+                        <viewControllerLayoutGuide type="top" id="AYm-Nl-Xxd"/>
+                        <viewControllerLayoutGuide type="bottom" id="4CD-uJ-pBo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qQ8-EU-sHg">
+                    <view key="view" contentMode="scaleToFill" id="JLd-YL-MtK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hEy-x7-4Jp" customClass="CHButton" customModule="CHComponent">
-                                <rect key="frame" x="78" y="249" width="256" height="403"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                <state key="normal" image="square.and.arrow.down.fill" catalog="system">
-                                    <attributedString key="attributedTitle">
-                                        <fragment>
-                                            <string key="content">ButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonBButtonB
-uttonButtonButtonButtonButtonButtonB
-uttonButtonButtonButtonButtonButtonButtonButtonButtonButto
-nButtonB
-uttonButtonButtonButtonButtonButtonB
-uttonButtonButtonButtonButtonButtonButtonButton</string>
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="spacing">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabelTextAlignment">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCM-Df-FqZ">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <string key="text">Label
+Label
+Label</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qCM-Df-FqZ" firstAttribute="top" secondItem="AYm-Nl-Xxd" secondAttribute="bottom" id="ULe-cG-cmK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qCM-Df-FqZ" secondAttribute="trailing" id="d7L-Mj-JMR"/>
+                            <constraint firstItem="4CD-uJ-pBo" firstAttribute="top" secondItem="qCM-Df-FqZ" secondAttribute="bottom" id="eae-9Q-vRH"/>
+                            <constraint firstItem="qCM-Df-FqZ" firstAttribute="leading" secondItem="JLd-YL-MtK" secondAttribute="leadingMargin" id="fMi-zG-hLq"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mMb-o1-55N"/>
-                    <connections>
-                        <outlet property="button" destination="hEy-x7-4Jp" id="HK5-qh-cq3"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bUY-YA-MPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xrc-cQ-KU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.79999999999995" y="232.53373313343329"/>
+            <point key="canvasLocation" x="233" y="1382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LF3-00-jvU">
@@ -133,7 +114,4 @@ uttonButtonButtonButtonButtonButtonButtonButton</string>
             <point key="canvasLocation" x="-1092" y="232"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
-    </resources>
 </document>

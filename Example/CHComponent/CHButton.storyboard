@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zoz-fr-J71">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="GgO-m0-E1l">
+            <objects>
+                <tableViewController id="zoz-fr-J71" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r6u-aA-4xI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="四种方向" id="Rnn-gy-ZT6">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ba0-qi-Byz">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ba0-qi-Byz" id="itm-IC-N4u">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz3-09-kiZ" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="45.5" y="39.5" width="75" height="21"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-p4-z0A" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="142.5" y="25.5" width="46" height="49"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdc-9v-G5l" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="211" y="39.5" width="75" height="21"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZn-kC-M9H" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="308" y="25.5" width="46" height="49"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kZn-kC-M9H" firstAttribute="centerX" secondItem="itm-IC-N4u" secondAttribute="centerX" multiplier="1.6" id="3h3-NA-Y4T"/>
+                                                <constraint firstItem="fdc-9v-G5l" firstAttribute="centerY" secondItem="itm-IC-N4u" secondAttribute="centerY" id="6DV-5H-jQM"/>
+                                                <constraint firstItem="fdc-9v-G5l" firstAttribute="centerX" secondItem="itm-IC-N4u" secondAttribute="centerX" multiplier="1.2" id="TEP-em-xut"/>
+                                                <constraint firstItem="Xes-p4-z0A" firstAttribute="centerY" secondItem="itm-IC-N4u" secondAttribute="centerY" id="anS-Q4-FVN"/>
+                                                <constraint firstItem="Mz3-09-kiZ" firstAttribute="centerY" secondItem="itm-IC-N4u" secondAttribute="centerY" id="cVb-tb-EVL"/>
+                                                <constraint firstItem="Xes-p4-z0A" firstAttribute="centerX" secondItem="itm-IC-N4u" secondAttribute="centerX" multiplier="0.8" id="dPT-hi-9ut"/>
+                                                <constraint firstItem="kZn-kC-M9H" firstAttribute="centerY" secondItem="itm-IC-N4u" secondAttribute="centerY" id="oO3-Zh-ld4"/>
+                                                <constraint firstItem="Mz3-09-kiZ" firstAttribute="centerX" secondItem="itm-IC-N4u" secondAttribute="centerX" multiplier="0.4" id="pTX-Ay-q9M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="图片放大" id="sbR-5x-0pg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KUA-6n-pcG">
+                                        <rect key="frame" x="0.0" y="184" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KUA-6n-pcG" id="O0a-IA-a5V">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXA-kV-H46" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="36" y="29" width="94" height="42"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lf-Pf-VXs" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="142.5" y="15" width="46" height="70"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHR-fO-AvQ" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="201.5" y="29" width="94" height="42"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ueb-ez-PUH" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="308" y="15" width="46" height="70"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eXA-kV-H46" firstAttribute="centerY" secondItem="O0a-IA-a5V" secondAttribute="centerY" id="3G0-Wx-Cxk"/>
+                                                <constraint firstItem="1lf-Pf-VXs" firstAttribute="centerX" secondItem="O0a-IA-a5V" secondAttribute="centerX" multiplier="0.8" id="5mE-B4-g3p"/>
+                                                <constraint firstItem="1lf-Pf-VXs" firstAttribute="centerY" secondItem="O0a-IA-a5V" secondAttribute="centerY" id="7Uj-Po-YfD"/>
+                                                <constraint firstItem="Ueb-ez-PUH" firstAttribute="centerY" secondItem="O0a-IA-a5V" secondAttribute="centerY" id="EbZ-fD-MMe"/>
+                                                <constraint firstItem="Ueb-ez-PUH" firstAttribute="centerX" secondItem="O0a-IA-a5V" secondAttribute="centerX" multiplier="1.6" id="QaF-gZ-C2h"/>
+                                                <constraint firstItem="sHR-fO-AvQ" firstAttribute="centerY" secondItem="O0a-IA-a5V" secondAttribute="centerY" id="TG4-3Y-IXj"/>
+                                                <constraint firstItem="eXA-kV-H46" firstAttribute="centerX" secondItem="O0a-IA-a5V" secondAttribute="centerX" multiplier="0.4" id="hJr-Z4-d7r"/>
+                                                <constraint firstItem="sHR-fO-AvQ" firstAttribute="centerX" secondItem="O0a-IA-a5V" secondAttribute="centerX" multiplier="1.2" id="zMh-yK-L3c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="图片缩小" id="Fbp-zO-yS5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="spu-mu-CBi">
+                                        <rect key="frame" x="0.0" y="340" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="spu-mu-CBi" id="nPa-1N-ScY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKu-yH-1o9" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="50" y="41" width="65.5" height="18"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6K-Lk-hj6" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="142.5" y="31" width="46" height="38.5"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUU-pd-UaI" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="215.5" y="41" width="65.5" height="18"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzB-vZ-3Fh" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="308" y="31" width="46" height="38.5"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="M6K-Lk-hj6" firstAttribute="centerX" secondItem="nPa-1N-ScY" secondAttribute="centerX" multiplier="0.8" id="91P-VN-GGF"/>
+                                                <constraint firstItem="nzB-vZ-3Fh" firstAttribute="centerY" secondItem="nPa-1N-ScY" secondAttribute="centerY" id="F4r-lO-ezA"/>
+                                                <constraint firstItem="M6K-Lk-hj6" firstAttribute="centerY" secondItem="nPa-1N-ScY" secondAttribute="centerY" id="HDX-UU-nzF"/>
+                                                <constraint firstItem="iUU-pd-UaI" firstAttribute="centerX" secondItem="nPa-1N-ScY" secondAttribute="centerX" multiplier="1.2" id="IbK-rZ-LGJ"/>
+                                                <constraint firstItem="iUU-pd-UaI" firstAttribute="centerY" secondItem="nPa-1N-ScY" secondAttribute="centerY" id="aSE-D7-s4r"/>
+                                                <constraint firstItem="QKu-yH-1o9" firstAttribute="centerX" secondItem="nPa-1N-ScY" secondAttribute="centerX" multiplier="0.4" id="egy-hi-6KF"/>
+                                                <constraint firstItem="nzB-vZ-3Fh" firstAttribute="centerX" secondItem="nPa-1N-ScY" secondAttribute="centerX" multiplier="1.6" id="fUK-Po-P75"/>
+                                                <constraint firstItem="QKu-yH-1o9" firstAttribute="centerY" secondItem="nPa-1N-ScY" secondAttribute="centerY" id="hPW-uB-8ch"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="调整spacing" id="hs9-fq-tAh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="OPy-0c-vrO">
+                                        <rect key="frame" x="0.0" y="496" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OPy-0c-vrO" id="8Sm-yC-hCx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mi-DC-EmJ" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="50.5" y="39.5" width="65" height="21"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwP-nC-e6Z" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="142.5" y="28" width="46" height="44"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-6G-6XX" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="211" y="39.5" width="75" height="21"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLz-sB-rO2" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="308" y="23" width="46" height="54"/>
+                                                    <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LwP-nC-e6Z" firstAttribute="centerX" secondItem="8Sm-yC-hCx" secondAttribute="centerX" multiplier="0.8" id="1K8-Pj-uNp"/>
+                                                <constraint firstItem="LwP-nC-e6Z" firstAttribute="centerY" secondItem="8Sm-yC-hCx" secondAttribute="centerY" id="4aQ-4S-VVH"/>
+                                                <constraint firstItem="pAH-6G-6XX" firstAttribute="centerX" secondItem="8Sm-yC-hCx" secondAttribute="centerX" multiplier="1.2" id="9Vy-2d-rX9"/>
+                                                <constraint firstItem="tLz-sB-rO2" firstAttribute="centerX" secondItem="8Sm-yC-hCx" secondAttribute="centerX" multiplier="1.6" id="Hz8-lN-4Ii"/>
+                                                <constraint firstItem="7Mi-DC-EmJ" firstAttribute="centerX" secondItem="8Sm-yC-hCx" secondAttribute="centerX" multiplier="0.4" id="Odl-h2-ch6"/>
+                                                <constraint firstItem="7Mi-DC-EmJ" firstAttribute="centerY" secondItem="8Sm-yC-hCx" secondAttribute="centerY" id="e3Z-4E-zgM"/>
+                                                <constraint firstItem="pAH-6G-6XX" firstAttribute="centerY" secondItem="8Sm-yC-hCx" secondAttribute="centerY" id="f9a-Ki-1NU"/>
+                                                <constraint firstItem="tLz-sB-rO2" firstAttribute="centerY" secondItem="8Sm-yC-hCx" secondAttribute="centerY" id="pzR-Kq-TBj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="多行文字" id="Pe3-PZ-Vz3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="a14-uh-Xo7">
+                                        <rect key="frame" x="0.0" y="652" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a14-uh-Xo7" id="SnL-ed-HPi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8K-Ql-jmC" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="41.5" y="39.5" width="83" height="21.5"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Button">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelTextAlignment">
+                                                            <integer key="value" value="-2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvG-Zb-4vc" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="138.5" y="24" width="54" height="52"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+Button</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbB-zB-a8S" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="207" y="39.5" width="83" height="21"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+Button</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpp-ra-CLb" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="304" y="24" width="54" height="52"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+Button</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cbB-zB-a8S" firstAttribute="centerX" secondItem="SnL-ed-HPi" secondAttribute="centerX" multiplier="1.2" id="4gM-jO-e5G"/>
+                                                <constraint firstItem="zpp-ra-CLb" firstAttribute="centerX" secondItem="SnL-ed-HPi" secondAttribute="centerX" multiplier="1.6" id="GJ5-gI-voL"/>
+                                                <constraint firstItem="m8K-Ql-jmC" firstAttribute="centerX" secondItem="SnL-ed-HPi" secondAttribute="centerX" multiplier="0.4" id="Lc8-v0-boD"/>
+                                                <constraint firstItem="hvG-Zb-4vc" firstAttribute="centerX" secondItem="SnL-ed-HPi" secondAttribute="centerX" multiplier="0.8" id="bRs-kL-cyd"/>
+                                                <constraint firstItem="zpp-ra-CLb" firstAttribute="centerY" secondItem="SnL-ed-HPi" secondAttribute="centerY" id="eh3-DI-Qjd"/>
+                                                <constraint firstItem="m8K-Ql-jmC" firstAttribute="centerY" secondItem="SnL-ed-HPi" secondAttribute="centerY" id="jDr-zc-fkr"/>
+                                                <constraint firstItem="cbB-zB-a8S" firstAttribute="centerY" secondItem="SnL-ed-HPi" secondAttribute="centerY" id="kmY-YT-d44"/>
+                                                <constraint firstItem="hvG-Zb-4vc" firstAttribute="centerY" secondItem="SnL-ed-HPi" secondAttribute="centerY" id="qE2-91-IkV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="多行文字设置numberOfLines" id="K3a-4O-kT5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="ZyF-6T-MtP">
+                                        <rect key="frame" x="0.0" y="808" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZyF-6T-MtP" id="jnG-yV-9DL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oTu-cM-nKz" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="41.5" y="28.5" width="83" height="43"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Button">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelTextAlignment">
+                                                            <integer key="value" value="-2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZm-Tg-4Mt" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="138.5" y="13.5" width="54.5" height="73"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+Button</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geR-I5-ef9" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="206.5" y="29" width="83.5" height="42"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+Button</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svl-nF-Drj" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="304" y="13.5" width="54.5" height="73"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+Button</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oTu-cM-nKz" firstAttribute="centerY" secondItem="jnG-yV-9DL" secondAttribute="centerY" id="KhK-EZ-EfF"/>
+                                                <constraint firstItem="svl-nF-Drj" firstAttribute="centerY" secondItem="jnG-yV-9DL" secondAttribute="centerY" id="O19-yM-s9h"/>
+                                                <constraint firstItem="svl-nF-Drj" firstAttribute="centerX" secondItem="jnG-yV-9DL" secondAttribute="centerX" multiplier="1.6" id="Trw-nR-7zP"/>
+                                                <constraint firstItem="aZm-Tg-4Mt" firstAttribute="centerX" secondItem="jnG-yV-9DL" secondAttribute="centerX" multiplier="0.8" id="VES-Ew-lW9"/>
+                                                <constraint firstItem="geR-I5-ef9" firstAttribute="centerX" secondItem="jnG-yV-9DL" secondAttribute="centerX" multiplier="1.2" id="Xbz-SS-5nA"/>
+                                                <constraint firstItem="aZm-Tg-4Mt" firstAttribute="centerY" secondItem="jnG-yV-9DL" secondAttribute="centerY" id="XvR-et-GjU"/>
+                                                <constraint firstItem="oTu-cM-nKz" firstAttribute="centerX" secondItem="jnG-yV-9DL" secondAttribute="centerX" multiplier="0.4" id="clV-Bt-Q52"/>
+                                                <constraint firstItem="geR-I5-ef9" firstAttribute="centerY" secondItem="jnG-yV-9DL" secondAttribute="centerY" id="yMv-NN-Qrm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="图片文字排在两边" id="fRc-bg-q2D">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="2RO-5x-uzA">
+                                        <rect key="frame" x="0.0" y="964" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2RO-5x-uzA" id="9f0-17-ELY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2y4-o6-sPD" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="8" y="11" width="398" height="78"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Button">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maximumIntrinsicContentRect" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2y4-o6-sPD" firstAttribute="top" secondItem="9f0-17-ELY" secondAttribute="topMargin" id="Ywg-mI-R3g"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2y4-o6-sPD" secondAttribute="bottom" id="bN9-Dg-83d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2y4-o6-sPD" secondAttribute="trailing" id="eIE-lV-wQJ"/>
+                                                <constraint firstItem="2y4-o6-sPD" firstAttribute="leading" secondItem="9f0-17-ELY" secondAttribute="leadingMargin" id="qVU-hh-AYs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="图片文字排在两边" id="rbb-P8-E7o">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="n1E-tl-B7G">
+                                        <rect key="frame" x="0.0" y="1120" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n1E-tl-B7G" id="C4F-iJ-en3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qo-hg-Ik1" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="8" y="11" width="398" height="78"/>
+                                                    <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+</string>
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" metaFont="system" size="24"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Button">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" metaFont="system" size="24"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maximumIntrinsicContentRect" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="imageScale">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5qo-hg-Ik1" firstAttribute="top" secondItem="C4F-iJ-en3" secondAttribute="topMargin" id="N1b-vm-dkA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5qo-hg-Ik1" secondAttribute="bottom" id="RUK-aZ-T59"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5qo-hg-Ik1" secondAttribute="trailing" id="dt1-gA-KYm"/>
+                                                <constraint firstItem="5qo-hg-Ik1" firstAttribute="leading" secondItem="C4F-iJ-en3" secondAttribute="leadingMargin" id="psV-Gm-jM1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="没什么用的fill" id="nBY-Zl-fpe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="4ZK-eM-EFF">
+                                        <rect key="frame" x="0.0" y="1276" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ZK-eM-EFF" id="mXd-U7-Rda">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWl-8b-gGI" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="8" y="11" width="398" height="78"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">Button
+</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Button">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maximumIntrinsicContentRect" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelTextAlignment">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HWl-8b-gGI" firstAttribute="leading" secondItem="mXd-U7-Rda" secondAttribute="leadingMargin" id="7Gn-WR-SmY"/>
+                                                <constraint firstItem="HWl-8b-gGI" firstAttribute="top" secondItem="mXd-U7-Rda" secondAttribute="topMargin" id="Li1-bH-Mi4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HWl-8b-gGI" secondAttribute="bottom" id="Ug4-5C-LfD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HWl-8b-gGI" secondAttribute="trailing" id="Z7F-gR-ETp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="没什么用的fill" id="ea6-Ny-Qdr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="6tZ-LD-r5S">
+                                        <rect key="frame" x="0.0" y="1432" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6tZ-LD-r5S" id="e01-j0-X0x">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Is8-XM-S1l" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="8" y="11" width="398" height="78"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <string key="title">Button
+Button</string>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maximumIntrinsicContentRect" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelTextAlignment">
+                                                            <integer key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Is8-XM-S1l" firstAttribute="top" secondItem="e01-j0-X0x" secondAttribute="topMargin" id="3wu-wX-vwe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Is8-XM-S1l" secondAttribute="bottom" id="A5l-n8-ZYK"/>
+                                                <constraint firstItem="Is8-XM-S1l" firstAttribute="leading" secondItem="e01-j0-X0x" secondAttribute="leadingMargin" id="Hcy-6R-0ri"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Is8-XM-S1l" secondAttribute="trailing" id="fyt-kk-7P8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="没什么用的fill" id="gTO-bp-82V">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="3YD-y1-O1Q">
+                                        <rect key="frame" x="0.0" y="1588" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3YD-y1-O1Q" id="07M-6F-Dx8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-j5-5Cr" customClass="CHButton" customModule="CHComponent">
+                                                    <rect key="frame" x="8" y="8" width="398" height="84"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                    <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                        <string key="title">Button
+Button</string>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelNumberOfLines">
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maximumIntrinsicContentRect" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="titleLabelTextAlignment">
+                                                            <integer key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ttA-j5-5Cr" firstAttribute="leading" secondItem="07M-6F-Dx8" secondAttribute="leadingMargin" id="DRa-2i-BTO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ttA-j5-5Cr" secondAttribute="bottom" id="Psy-vk-yTl"/>
+                                                <constraint firstItem="ttA-j5-5Cr" firstAttribute="top" secondItem="07M-6F-Dx8" secondAttribute="topMargin" id="Upp-wf-wmf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ttA-j5-5Cr" secondAttribute="trailing" id="hVS-hZ-289"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="zoz-fr-J71" id="hyI-DV-nXu"/>
+                            <outlet property="delegate" destination="zoz-fr-J71" id="etb-4T-iNK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGs-XG-QNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>

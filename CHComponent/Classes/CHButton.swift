@@ -53,31 +53,24 @@ import UIKit
         }
     }
     
+    private var titleLabelTextAlignmentChanged: Bool = true
+    
     @IBInspectable public var titleLabelTextAlignment: Int = 1 {
         didSet {
-            updateTitleLabelAlignment()
+            titleLabelTextAlignmentChanged = true
         }
     }
     
+    private var titleLabelNumberOfLinesChanged: Bool = true
+    
     @IBInspectable public var titleLabelNumberOfLines: Int = 1 {
         didSet {
-            titleLabel?.numberOfLines = titleLabelNumberOfLines
-            self.invalidateIntrinsicContentSize()
+            titleLabelNumberOfLinesChanged = true
         }
     }
     
     var isInitTitleLabel: Bool = false
     var realTitleWidth: CGFloat?
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        updateTitleLabelAlignment()
-    }
-    
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        updateTitleLabelAlignment()
-    }
     
     func updateTitleLabelAlignment() {
         if let alignment = NSTextAlignment(rawValue: titleLabelTextAlignment) {
@@ -87,6 +80,18 @@ import UIKit
     
     func updateButton() {
         setNeedsLayout()
+    }
+    
+    public override func layoutSubviews() {
+        if titleLabelTextAlignmentChanged {
+            titleLabelTextAlignmentChanged = false
+            updateTitleLabelAlignment()
+        }
+        if titleLabelNumberOfLinesChanged {
+            titleLabelNumberOfLinesChanged = false
+            titleLabel?.numberOfLines = titleLabelNumberOfLines
+        }
+        super.layoutSubviews()
     }
     
     public override func prepareForInterfaceBuilder() {
