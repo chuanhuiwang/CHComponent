@@ -70,7 +70,10 @@ import UIKit
     }
     
     var isInitTitleLabel: Bool = false
+    var _realTitleWidth: CGFloat?
     var realTitleWidth: CGFloat?
+    
+    @IBInspectable var performPrepareForInterfaceBuilder: Bool = true
     
     func updateTitleLabelAlignment() {
         if let alignment = NSTextAlignment(rawValue: titleLabelTextAlignment) {
@@ -83,6 +86,7 @@ import UIKit
     }
     
     public override func layoutSubviews() {
+        super.layoutSubviews()
         if titleLabelTextAlignmentChanged {
             titleLabelTextAlignmentChanged = false
             updateTitleLabelAlignment()
@@ -91,16 +95,24 @@ import UIKit
             titleLabelNumberOfLinesChanged = false
             titleLabel?.numberOfLines = titleLabelNumberOfLines
         }
-        super.layoutSubviews()
+        if realTitleWidth != _realTitleWidth {
+            realTitleWidth = _realTitleWidth
+            if realTitleWidth != nil {
+                self.invalidateIntrinsicContentSize()
+                self.setNeedsLayout()
+            }
+        }
     }
     
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        if backgroundColor == nil || backgroundColor == .clear {
-            backgroundColor = .purple
+        if performPrepareForInterfaceBuilder {
+            if backgroundColor == nil || backgroundColor == .clear {
+                backgroundColor = .purple
+            }
+            titleLabel?.backgroundColor = .orange
+            imageView?.backgroundColor = .cyan
         }
-        titleLabel?.backgroundColor = .orange
-        imageView?.backgroundColor = .cyan
     }
 
     public override func sizeThatFits(_ size: CGSize) -> CGSize {
@@ -309,8 +321,9 @@ extension CHButton {
                 rect.size.width = min(titleSize.width, width)
             }
             if rect.width != titleSize.width {
-                realTitleWidth = rect.width
-                self.invalidateIntrinsicContentSize()
+                _realTitleWidth = rect.width
+            }else {
+                _realTitleWidth = nil
             }
             if contentDirection == .leftToRight {
                 rect.origin.x = contentRect.maxX - rect.width
@@ -333,8 +346,9 @@ extension CHButton {
                 ()
             }
             if rect.width != titleSize.width {
-                realTitleWidth = rect.width
-                self.invalidateIntrinsicContentSize()
+                _realTitleWidth = rect.width
+            }else {
+                _realTitleWidth = nil
             }
             if contentVerticalAlignment == .fill {
                 if (titleSize.height + imageSize.height + spacing) < contentRect.height {
