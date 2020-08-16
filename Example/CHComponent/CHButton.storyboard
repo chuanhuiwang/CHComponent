@@ -160,7 +160,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKu-yH-1o9" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="50" y="41" width="65.5" height="18"/>
+                                                    <rect key="frame" x="48.5" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
@@ -172,7 +172,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6K-Lk-hj6" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="142.5" y="31" width="46" height="38.5"/>
+                                                    <rect key="frame" x="131" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
@@ -184,7 +184,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUU-pd-UaI" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="215.5" y="41" width="65.5" height="18"/>
+                                                    <rect key="frame" x="214" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
@@ -196,7 +196,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzB-vZ-3Fh" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="308" y="31" width="46" height="38.5"/>
+                                                    <rect key="frame" x="296.5" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
@@ -233,7 +233,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mi-DC-EmJ" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="50.5" y="39.5" width="65" height="21"/>
+                                                    <rect key="frame" x="48.5" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
@@ -248,7 +248,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwP-nC-e6Z" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="142.5" y="28" width="46" height="44"/>
+                                                    <rect key="frame" x="131" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
@@ -260,7 +260,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-6G-6XX" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="211" y="39.5" width="75" height="21"/>
+                                                    <rect key="frame" x="214" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
@@ -275,7 +275,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLz-sB-rO2" customClass="CHButton" customModule="CHComponent">
-                                                    <rect key="frame" x="308" y="23" width="46" height="54"/>
+                                                    <rect key="frame" x="296.5" y="37" width="69" height="26"/>
                                                     <state key="normal" title="Button" image="square.and.arrow.up" catalog="system"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="contentDirectionRawValue">
