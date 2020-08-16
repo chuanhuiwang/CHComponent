@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CHComponent'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'CHComponent, UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
 CHComponent, UI组件库,
 自定义按钮: 左图右字，右图左字，上图下字，下图上字，图片缩放，间距设置, maximumIntrinsicContentRect = true 时，图片和文字显示在两边, 可设置文字显示行数
 自动布局视图，分割线视图
+CHTransitionView，弹出自定义视图，可配置自定义动画
                        DESC
 
   s.homepage         = 'https://github.com/chuanhuiwang/CHComponent'
@@ -30,7 +31,7 @@ CHComponent, UI组件库,
   s.source           = { :git => 'https://github.com/chuanhuiwang/CHComponent.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'CHComponent/Classes/**/*'
   

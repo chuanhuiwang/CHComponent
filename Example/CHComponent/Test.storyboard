@@ -16,79 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEN-kw-IdK" customClass="AutoEdgeView" customModule="CHComponent">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-n3-fKw">
+                                <rect key="frame" x="159" y="122" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OvH-9Q-SuP" customClass="AutoSeparatorView" customModule="CHComponent">
-                                        <rect key="frame" x="0.0" y="763" width="364" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="width">
-                                                <real key="value" value="104"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="scaleSeparatorWidth" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="heightLayoutConstant">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="topLayoutConstant">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomLayoutConstant">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leftLayoutConstant">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rightLayoutConstant">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useSafeArea" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w2Y-bm-Lmg" customClass="AutoLayoutView" customModule="CHComponent">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="leftLayoutActive" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rightLayoutActive" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLayoutActive" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLayoutActive" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="widthLayoutMultiplier">
-                                        <real key="value" value="0.25"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="heightLayoutMultiplier">
-                                        <real key="value" value="0.25"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="widthConstantLayoutActive" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="heightConstantLayoutActive" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="widthConstantLayoutConstant">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="heightConstantLayoutConstant">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useScreenScale" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useSafeArea" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="centerXLayoutActive" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="centerYLayoutActive" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="centerXLayoutMultiplier">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="centerYLayoutMultiplier">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="widthLayoutActive" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="heightLayoutActive" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Oef-eO-vrw"/>

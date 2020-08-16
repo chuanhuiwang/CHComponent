@@ -319,19 +319,9 @@ import UIKit
         heightConstantLayout?.constant = heightConstantLayoutConstant / scale
     }
     
-    
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        leftLayoutUpdate()
-        rightLayoutUpdate()
-        topLayoutUpdate()
-        bottomLayoutUpdate()
-        centerXLayoutUpdate()
-        centerYLayoutUpdate()
-        widthLayoutUpdate()
-        heightLayoutUpdate()
-        widthConstantLayoutUpdate()
-        heightConstantLayoutUpdate()
+    public override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        updateAllLayout()
     }
     
     func updateAllLayout() {
