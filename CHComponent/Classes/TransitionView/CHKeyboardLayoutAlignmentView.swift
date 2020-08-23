@@ -11,7 +11,7 @@ public protocol CHKeyboardLayoutAlignmentViewDelegate: class {
     func keyboardLayoutAlignmentView(_ view: CHKeyboardLayoutAlignmentView, heightChanged height: CGFloat, duration: TimeInterval, curve: UInt)
 }
 
-public class CHKeyboardLayoutAlignmentView: AutoSeparatorView {
+public class CHKeyboardLayoutAlignmentView: StyleSeparatorView {
     
     deinit {
         NotificationCenter.default.removeObserver(self)

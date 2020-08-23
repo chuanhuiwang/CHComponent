@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable public class CHButton: UIButton {
     
-    public enum ContentDirection {
+    public enum ContentDirection: Int {
         case leftToRight
         case rightToLeft
         case topToBottom
@@ -18,12 +18,10 @@ import UIKit
     
     @IBInspectable public var contentDirectionRawValue: Int {
         get {
-            let dic: [ContentDirection: Int] = [.leftToRight: 0, .rightToLeft: 1, .topToBottom: 2, .bottomToTop: 3]
-            return dic[contentDirection] ?? 0
+            return contentDirection.rawValue
         }
         set {
-            let dic: [Int: ContentDirection] = [0: .leftToRight, 1: .rightToLeft, 2: .topToBottom, 3: .bottomToTop]
-            if let value = dic[newValue] {
+            if let value = ContentDirection(rawValue: newValue) {
                 contentDirection = value
             }
         }

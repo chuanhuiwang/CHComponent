@@ -1,5 +1,5 @@
 PODS:
-  - CHComponent (0.1.7)
+  - CHComponent (0.1.8)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CHComponent: f500f9ee4c46dbe20eeda884fe9dccb515639eff
+  CHComponent: 8346de8caf2eeaaf31d284efebf3ae62fd724b6f
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: 8d85fafbf2e888995b435df40e15c37e0a1a79ed

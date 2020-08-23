@@ -18,6 +18,7 @@ class RootView: UIView, CHTransitionViewRootView {
     
     func hideByTapBackgroundView(transitionView: CHTransitionView) {
         print(transitionView)
+        self.window?.endEditing(true)
     }
     
 }
@@ -26,70 +27,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        
-        let alert = UIAlertController(title: "title", message: "message", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { (_) in
-
-        }))
-//        alert.addTextField { (textfield) in
-//
-//        }
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "destructive destructive destructive destructive destructive destructive destructive", style: .destructive, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "destructive", style: .destructive, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "destructive", style: .destructive, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "destructive", style: .destructive, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "destructive", style: .destructive, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "destructive", style: .destructive, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "destructive", style: .destructive, handler: { (_) in
-//
-//        }))
-//        alert.addAction(UIAlertAction(title: "default", style: .default, handler: { (_) in
-//
-//        }))
-        alert.addAction(UIAlertAction(title: "destructive", style: .destructive, handler: { (_) in
-
-        }))
-        present(alert, animated: true, completion: { () in
-//            alert.dismiss(animated: true, completion: nil)
-        })
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-//            alert.dismiss(animated: true, completion: nil)
-//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -111,11 +48,11 @@ class ViewController: UIViewController {
         transition.show()
         
         
-//        self.view.subviews.forEach { (item) in
-//            if let textfield = item as? UITextField {
-//                textfield.becomeFirstResponder()
-//            }
-//        }
+        self.view.subviews.forEach { (item) in
+            if let textfield = item as? UITextField {
+                textfield.becomeFirstResponder()
+            }
+        }
         
         transition.delayHide(3)
         transition.cancelDelayHide()
@@ -127,6 +64,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 }
 

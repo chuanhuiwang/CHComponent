@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable public class AutoSeparatorView: AutoLayoutView {
+@IBDesignable public class StyleSeparatorView: AutoSeparatorView {
     
     public enum Style: Int {
         case left
@@ -20,7 +20,7 @@ import UIKit
     
     public var style: Style = .bottom {
         didSet {
-            updateSeparatorLayout()
+            updateDirectionWithStyle()
         }
     }
     
@@ -35,47 +35,35 @@ import UIKit
         }
     }
     
-    @IBInspectable public var scaleSeparatorWidth: Bool {
-        get {
-            return useScreenScale
-        }
-        set {
-            useScreenScale = newValue
-        }
-    }
-    
-    @IBInspectable public var width: CGFloat = 1 {
-        didSet {
-            widthConstantLayoutConstant = width
-            heightConstantLayoutConstant = width
-        }
-    }
-    
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
     }
     
-    public init(style: Style = .bottom, width: CGFloat = 1) {
+    public init(style: Style = .bottom) {
         self.style = style
-        self.width = width
-        super.init(frame: .zero)
-        setup()
+        switch style {
+        case .top, .bottom, .centerY:
+            super.init(axis: .horizontal)
+        default:
+            super.init(axis: .vertical)
+        }
     }
     
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
     }
     
-    func setup() {
-        useScreenScale = true
-        updateSeparatorLayout()
+    func updateDirectionWithStyle() {
+        switch style {
+        case .top, .bottom, .centerY:
+            axis = .horizontal
+        default:
+            axis = .vertical
+        }
     }
     
-    func updateSeparatorLayout() {
-        widthLayoutActive = false
-        heightLayoutActive = false
+    override func updateSeparatorLayout() {
+        super.updateSeparatorLayout()
         switch style {
         case .left:
             leftLayoutActive = true

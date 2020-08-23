@@ -16,6 +16,8 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		B343A95124C9B6190080040A /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B343A95024C9B6190080040A /* Test.storyboard */; };
+		B35132DA24F26DE30007CEC9 /* AlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35132D924F26DE30007CEC9 /* AlertView.storyboard */; };
+		B35132DC24F26DF90007CEC9 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35132DB24F26DF90007CEC9 /* AlertViewController.swift */; };
 		B3B73A7B24C86852000F7F0A /* CHButton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B73A7A24C86852000F7F0A /* CHButton.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		639065B404FED4FAA09CA12C /* Pods-CHComponent_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHComponent_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CHComponent_Tests/Pods-CHComponent_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E177D9FED5573877CFA6F34 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B343A95024C9B6190080040A /* Test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
+		B35132D924F26DE30007CEC9 /* AlertView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertView.storyboard; sourceTree = "<group>"; };
+		B35132DB24F26DF90007CEC9 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		B3B73A7A24C86852000F7F0A /* CHButton.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CHButton.storyboard; sourceTree = "<group>"; };
 		BFD96814A9F4C9D81497436B /* Pods-CHComponent_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CHComponent_Example.debug.xcconfig"; path = "Target Support Files/Pods-CHComponent_Example/Pods-CHComponent_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E8546C2527C78590F5F8FD89 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				B35132DB24F26DF90007CEC9 /* AlertViewController.swift */,
+				B35132D924F26DE30007CEC9 /* AlertView.storyboard */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				B343A95024C9B6190080040A /* Test.storyboard */,
 				B3B73A7A24C86852000F7F0A /* CHButton.storyboard */,
@@ -252,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35132DA24F26DE30007CEC9 /* AlertView.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				B3B73A7B24C86852000F7F0A /* CHButton.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
@@ -358,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				B35132DC24F26DF90007CEC9 /* AlertViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
