@@ -24,6 +24,8 @@ public struct CHTransitionViewWrapper {
 
 public class CHTransitionView: UIView {
     
+    public static let allTransition: NSHashTable<CHTransitionView> = .init(options: .weakMemory)
+    
     public enum Status {
         case hidden
         case showing
@@ -52,6 +54,7 @@ public class CHTransitionView: UIView {
     public init(rootView: UIView) {
         self.rootView = rootView
         super.init(frame: UIScreen.main.bounds)
+        Self.allTransition.add(self)
         setup()
     }
     
