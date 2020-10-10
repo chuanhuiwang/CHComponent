@@ -446,13 +446,17 @@ extension CHButton {
     }
 
     func tempTitleLabel() -> UILabel {
-        if isInitTitleLabel, let label = titleLabel {
-            let data = NSKeyedArchiver.archivedData(withRootObject: label)
-            if let label = NSKeyedUnarchiver.unarchiveObject(with: data) as? UILabel {
-                return label
+        let label: UILabel
+        if isInitTitleLabel, let archived = titleLabel {
+            let data = NSKeyedArchiver.archivedData(withRootObject: archived)
+            if let unarchive = NSKeyedUnarchiver.unarchiveObject(with: data) as? UILabel {
+                label = unarchive
+            }else {
+                label = UILabel()
             }
+        }else {
+            label = UILabel()
         }
-        let label = UILabel()
         if let font = self.value(forKey: "lazyTitleViewFont") as? UIFont {
             label.font = font
         }
@@ -462,6 +466,10 @@ extension CHButton {
         if let attributedTitle = currentAttributedTitle {
             label.attributedText = attributedTitle
         }
+        if let alignment = NSTextAlignment(rawValue: titleLabelTextAlignment) {
+            label.textAlignment = alignment
+        }
+        label.numberOfLines = titleLabelNumberOfLines
         return label
     }
     

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CHComponent'
-  s.version          = '0.1.9'
+  s.version          = '0.2.0'
   s.summary          = 'CHComponent, UI组件库'
 
 # This description is used to generate tags and improve search results.
@@ -20,8 +20,6 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 CHComponent, UI组件库,
 自定义按钮: 左图右字，右图左字，上图下字，下图上字，图片缩放，间距设置, maximumIntrinsicContentRect = true 时，图片和文字显示在两边, 可设置文字显示行数
-自动布局视图，分割线视图
-CHTransitionView，弹出自定义视图，可配置自定义动画
                        DESC
 
   s.homepage         = 'https://github.com/chuanhuiwang/CHComponent'
@@ -42,5 +40,5 @@ CHTransitionView，弹出自定义视图，可配置自定义动画
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.swift_version = '5.0'
+  s.swift_version = '4.0'
 end
